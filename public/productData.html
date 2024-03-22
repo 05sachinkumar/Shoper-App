@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="row" style="margin:30px">
+
+        <div class="col-md-6">
+            <table border="2px" class="table table-hover">
+                <thead>
+                    <th>Product Name:</th>
+                    <th>Product Quantity:</th>
+                    <th>Product Price:</th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table> 
+
+            <a class="btn btn-outline-success" href="customerData.html">Continue</a>
+
+        </div>
+    </div>
+    <!-- read the data from local Storage -->
+    <script>
+        let cartData = JSON.parse(localStorage.getItem("cart"))
+        console.log(cartData)
+      
+        var totalPrice = 0
+
+        for(let i in cartData)
+        {   
+          const myQuantity = cartData[i][0]
+          const myName = cartData[i][1]
+          const myPrice = cartData[i][2]
+
+          totalPrice = totalPrice + myPrice
+
+          localStorage.setItem("total",totalPrice)
+          // console.log(myQuantity, myName, myPrice)
+          $("#tbody").append(`<tr><td>${myName}</td> <td>${myQuantity}</td> <td>${myPrice}</td></tr>`)
+        }
+        $("#tbody").append(`<tr> <td></td> <td><h3>TOTAL:</h3></td> <td><h3>${totalPrice}</h3></td> </tr>`)
+
+    </script>
+</body>
+</html>
