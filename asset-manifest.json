@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Shoper-App/static/css/main.e6c13ad2.css",
+    "main.js": "/Shoper-App/static/js/main.09e8da50.js",
+    "static/js/453.7a3fea2a.chunk.js": "/Shoper-App/static/js/453.7a3fea2a.chunk.js",
+    "index.html": "/Shoper-App/index.html",
+    "main.e6c13ad2.css.map": "/Shoper-App/static/css/main.e6c13ad2.css.map",
+    "main.09e8da50.js.map": "/Shoper-App/static/js/main.09e8da50.js.map",
+    "453.7a3fea2a.chunk.js.map": "/Shoper-App/static/js/453.7a3fea2a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.09e8da50.js"
+  ]
+}
